@@ -1,62 +1,618 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecionando...</title>
-    
-    <!-- Redirect imediato via meta refresh -->
-    <meta http-equiv="refresh" content="0; url=https://renanmgs.github.io/CharacterCraft_5.5e_Public/">
-    
-    <!-- Redirect via JavaScript como fallback -->
-    <script>
-        window.location.href = 'https://renanmgs.github.io/CharacterCraft_5.5e_Public/';
-    </script>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f5f5f5;
-        }
-        .redirect-message {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <meta name="description"
+        content="Renan Macêdo - Multidisciplinary Developer specializing in Game Development, VR/AR, Mobile Apps, and Virtual Production. Unity, Unreal Engine, Flutter expert.">
+    <meta name="keywords"
+        content="Game Developer, VR Developer, Unity, Unreal Engine, Flutter, Mobile Developer, Virtual Production">
+    <meta name="author" content="Renan Macêdo">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Renan Macêdo - Game & App Developer">
+    <meta property="og:description"
+        content="Multidisciplinary Developer specializing in Game Development, VR/AR, Mobile Apps, and Virtual Production.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://renanmgs.github.io">
+
+    <title>Renan Macêdo | Game & App Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
 </head>
+
 <body>
-    <div class="redirect-message">
-        <h2>Redirecionando...</h2>
-        <div class="loader"></div>
-        <p>Você será redirecionado automaticamente para:</p>
-        <p><a href="https://renanmgs.github.io/CharacterCraft_5.5e_Public/">CharacterCraft 5.5e</a></p>
-        <p><small>Se o redirecionamento não funcionar, clique no link acima.</small></p>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <span>R</span>enan
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Hello, I'm</p>
+                <h1 class="hero-title">Renan <span class="highlight">Macêdo</span></h1>
+                <p class="hero-description">
+                    Multidisciplinary developer with solid experience in Game Development, VR/AR experiences,
+                    and cross-platform applications. Passionate about combining real-time interactive environments
+                    with intuitive user experiences.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-placeholder">
+                       <img src="assets/images/profile.png" alt="Renan Macêdo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content">
+                <div class="about-stats fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number">7+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">7.5K+</div>
+                        <div class="stat-label">Character Craft Users (6 Months)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Platforms</div>
+                    </div>
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Building Interactive Experiences</h3>
+                    <p>
+                        I'm a multidisciplinary developer with over seven years of experience leading projects in
+                        Game Development, interactive training simulations, and application development for Android,
+                        iOS, macOS, and Windows.
+                    </p>
+                    <p>
+                        My expertise spans across Unity, Unreal Engine, Flutter, and JavaScript ecosystems. I've
+                        successfully delivered multiplayer VR experiences for clients like Volvo/Tracbel and SESI,
+                        re-built streaming platforms with 110k+ users and pioneered the Virtual Production
+                        workflow for Novo Tempo.
+                    </p>
+                    <p>
+                        I'm passionate about pushing the boundaries of real-time technology, from procedural generation
+                        systems to motion capture workflows and AI-assisted VFX pipelines.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🎮</div>
+                        <h3>Game Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unity 3D</span>
+                        <span class="skill-tag">Unreal Engine 5</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">C++ (Unreal)</span>
+                        <span class="skill-tag">Multiplayer</span>
+                        <span class="skill-tag">Procedural Generation</span>
+                        <span class="skill-tag">UI/UX Systems</span>
+                        <span class="skill-tag">Shaders</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🥽</div>
+                        <h3>VR/AR/XR</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">VR Development</span>
+                        <span class="skill-tag">AR Experiences</span>
+                        <span class="skill-tag">Immersive Training</span>
+                        <span class="skill-tag">Network Replication</span>
+                        <span class="skill-tag">Voice Chat Integration</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">📱</div>
+                        <h3>Mobile & Desktop</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">iOS</span>
+                        <span class="skill-tag">macOS</span>
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">CI/CD Pipelines</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🎬</div>
+                        <h3>Virtual Production</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Aximmetry</span>
+                        <span class="skill-tag">Photogrammetry</span>
+                        <span class="skill-tag">Motion Capture</span>
+                        <span class="skill-tag">AI-assisted VFX</span>
+                        <span class="skill-tag">Real-time Environments</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🌐</div>
+                        <h3>Backend & Web</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Firestore</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">WordPress</span>
+                        <span class="skill-tag">PHP</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🛠️</div>
+                        <h3>Tools & Workflows</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Blender</span>
+                        <span class="skill-tag">Unreal Engine</span>
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">Substance Painter</span>
+                        <span class="skill-tag">Marvelous Design</span>
+                        <span class="skill-tag">Da Vinci Resolve</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">Mar 2018 – Present</span>
+                    <div class="timeline-content">
+                        <h3>Game, Web & Mobile Developer</h3>
+                        <h4>Rede Novo Tempo de Comunicação • Brazil</h4>
+                        <ul>
+                            <li>Lead developer of mobile games, websites, and mobile applications</li>
+                            <li>Built and maintained video/audio streaming apps in Flutter (NTPlay, Rádio NT)</li>
+                            <li>Integrated Firebase services (authentication, notifications, analytics)</li>
+                            <li>Implemented virtual production systems with Unreal Engine and Aximmetry</li>
+                            <li>Developed photogrammetry and motion capture workflows for real-time environments</li>
+                            <li>Continuous maintenance of WordPress and JavaScript/PHP environments</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">May 2017 – Present</span>
+                    <div class="timeline-content">
+                        <h3>Freelance — VP, Game & App Developer</h3>
+                        <h4>Self-Employed</h4>
+                        <ul>
+                            <li>Helped set up the Virtual Production Studio for FullTrader</li>
+                            <li>Developed multiplayer VR demos, gamified training simulations, and learning platforms
+                            </li>
+                            <li>Delivered corporate VR projects for clients like Tracbel (Volvo) and SESI</li>
+                            <li>Created procedural generation systems and tools for Unreal Engine</li>
+                            <li>Built Character Craft 5.5e — Flutter character sheet app with real-time Firebase sync
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <article class="project-card fade-in">
+                    <div class="project-carousel" data-interval="4000">
+                        <div class="carousel-slides">
+                            <img src="assets/images/projects/charactercraft-1.png" alt="Character Craft 5.5e - Screenshot 1" class="carousel-slide active">
+                            <img src="assets/images/projects/charactercraft-2.png" alt="Character Craft 5.5e - Screenshot 2" class="carousel-slide">
+                            <img src="assets/images/projects/charactercraft-3.png" alt="Character Craft 5.5e - Screenshot 3" class="carousel-slide">
+                            <img src="assets/images/projects/charactercraft-4.png" alt="Character Craft 5.5e - Screenshot 4" class="carousel-slide">
+                            <img src="assets/images/projects/charactercraft-5.png" alt="Character Craft 5.5e - Screenshot 5" class="carousel-slide">
+                        </div>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Character Craft 5.5e</h3>
+                        <p>A companion app for D&D players and DMs with 7,500+ users in 6 months. Features real-time
+                            data synchronization for instant character sheet updates.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Firestore</span>
+                            <span>Dart</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://renanmgs.github.io/CharacterCraft_5.5e_Public/" target="_blank"
+                                rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in">
+                    <div class="project-carousel" data-interval="4500">
+                        <div class="carousel-slides">
+                            <img src="assets/images/projects/tracbel-1.png" alt="Tracbel VR - Screenshot 1" class="carousel-slide active">
+                            <img src="assets/images/projects/tracbel-2.png" alt="Tracbel VR - Screenshot 2" class="carousel-slide">
+                            <img src="assets/images/projects/tracbel-3.png" alt="Tracbel VR - Screenshot 3" class="carousel-slide">
+                            <img src="assets/images/projects/tracbel-4.png" alt="Tracbel VR - Screenshot 4" class="carousel-slide">
+                            <img src="assets/images/projects/tracbel-5.png" alt="Tracbel VR - Screenshot 5" class="carousel-slide">
+                        </div>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Volvo/Tracbel VR Experience</h3>
+                        <p>Multiplayer VR showroom for heavy machinery. Features real-time network replication and voice
+                            chat for remote sales presentations and interactive product demos.</p>
+                        <div class="project-tech">
+                            <span>Unreal Engine</span>
+                            <span>VR</span>
+                            <span>Multiplayer</span>
+                            <span>C++</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.artstation.com/renanmgs" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                View on ArtStation
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in">
+                    <div class="project-carousel" data-interval="5000">
+                        <div class="carousel-slides">
+                            <img src="assets/images/projects/ntplay-1.jpg" alt="NTPlay - Screenshot 1" class="carousel-slide active">
+                            <img src="assets/images/projects/ntplay-2.jpg" alt="NTPlay - Screenshot 2" class="carousel-slide">
+                            <img src="assets/images/projects/ntplay-3.jpg" alt="NTPlay - Screenshot 3" class="carousel-slide">
+                        </div>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>NTPlay & Rádio NT</h3>
+                        <p>Streaming ecosystem with 110K+ combined downloads. Complete architectural redevelopment of
+                            media apps with optimized UI/UX and CI/CD pipelines.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Android</span>
+                            <span>iOS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                                </svg>
+                                App Stores
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in">
+                    <div class="project-carousel" data-interval="4200">
+                        <div class="carousel-slides">
+                            <img src="assets/images/projects/ajornada-1.png" alt="A Jornada - Screenshot 1" class="carousel-slide active">
+                            <img src="assets/images/projects/ajornada-2.png" alt="A Jornada - Screenshot 2" class="carousel-slide">
+                            <img src="assets/images/projects/ajornada-3.png" alt="A Jornada - Screenshot 3" class="carousel-slide">
+                            <img src="assets/images/projects/ajornada-4.png" alt="A Jornada - Screenshot 4" class="carousel-slide">
+                        </div>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>"A Jornada" - Turn-Based Puzzle</h3>
+                        <p>Lara Croft GO-inspired puzzle game. Led full-cycle development including grid-based movement
+                            mechanics, environment design, and custom shader effects.</p>
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Shaders</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.artstation.com/renanmgs" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                View on ArtStation
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="assets/images/projects/sesi-1.png" alt="SESI VR Training">
+                    </div>
+                    <div class="project-content">
+                        <h3>SESI Safety Simulations</h3>
+                        <p>Industrial VR training modules with realistic physics interactions and user guidance systems.
+                            Adopted for corporate safety certification standards.</p>
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>VR</span>
+                            <span>Physics</span>
+                            <span>Training</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.artstation.com/renanmgs" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                View on ArtStation
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in">
+                    <div class="project-carousel" data-interval="5500">
+                        <div class="carousel-slides">
+                            <!-- <div class="carousel-slide carousel-video active">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/JDKF9mtlYRU?autoplay=0&mute=1&rel=0" 
+                                    title="Virtual Production Demo" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div> -->
+                            <img src="assets/images/projects/vp-1.webp" alt="Virtual Production - Screenshot 1" class="carousel-slide">
+                            <img src="assets/images/projects/vp-2.webp" alt="Virtual Production - Screenshot 2" class="carousel-slide">
+                            <img src="assets/images/projects/vp-3.webp" alt="Virtual Production - Screenshot 3" class="carousel-slide">
+                            <img src="assets/images/projects/vp-4.webp" alt="Virtual Production - Screenshot 4" class="carousel-slide">
+                        </div>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Virtual Production Pipeline</h3>
+                        <p>Pioneered the Virtual Production workflow for Novo Tempo, integrating Unreal Engine,
+                            Aximmetry, photogrammetry, and motion capture for real-time broadcast.</p>
+                        <div class="project-tech">
+                            <span>Unreal Engine</span>
+                            <span>Aximmetry</span>
+                            <span>MoCap</span>
+                            <span>VFX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/watch?v=JDKF9mtlYRU" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                                Watch Video
+                            </a>
+                            <a href="https://www.artstation.com/renanmgs" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                ArtStation
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles" id="articles">
+        <div class="container">
+            <h2 class="section-title fade-in">Published Articles</h2>
+            <p class="fade-in" style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">
+                Technical articles published on 80.lv, an industry-leading game development platform.
+            </p>
+            <div class="articles-grid">
+                <article class="article-card fade-in">
+                    <h3>Procedural Medieval Village Generator Set-up in UE5</h3>
+                    <p>A deep dive into creating procedural generation systems for realistic medieval environments in
+                        Unreal Engine 5.</p>
+                    <a href="https://80.lv/articles/procedural-medieval-village-generator-set-up-in-unreal-engine-5"
+                        target="_blank" rel="noopener">
+                        Read Article
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="article-card fade-in">
+                    <h3>Experimenting with UE5.2's Procedural Content Framework</h3>
+                    <p>Exploring the new Procedural Content Generation framework introduced in Unreal Engine 5.2 and its
+                        capabilities.</p>
+                    <a href="https://80.lv/articles/experimenting-with-ue5-2-s-procedural-content-generation-framework/"
+                        target="_blank" rel="noopener">
+                        Read Article
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title fade-in">Education</h2>
+            <div class="education-card fade-in">
+                <div class="education-icon">🎓</div>
+                <div class="education-info">
+                    <h3>B.A. in Digital Games</h3>
+                    <h4>Universidade FUMEC, Belo Horizonte, Brazil</h4>
+                    <p>2013 - 2016</p>
+                    <p>
+                        The Digital Games Course prepared me for the Game Development Industry, covering
+                        Storytelling, 3D Modeling, Programming, Sound FX, and various fields crucial
+                        for success in interactive entertainment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <div class="contact-content fade-in">
+                <p>
+                    Interested in working together or have a project in mind?
+                    Feel free to reach out through any of the channels below.
+                </p>
+                <div class="contact-links">
+                    <a href="https://github.com/renanmgs" target="_blank" rel="noopener" class="contact-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/renanmgs" target="_blank" rel="noopener" class="contact-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://www.artstation.com/renanmgs" target="_blank" rel="noopener" class="contact-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24-3.313L14.689 0H9.976L4.93 9.156l6.027 10.418h10.251a2.424 2.424 0 0 0 2.134-1.283l.658-1.881zM9.191 14.41L6.193 9.156l2.998-5.255 5.996 10.509H9.191z" />
+                        </svg>
+                        ArtStation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Renan Macêdo. Built with passion for interactive experiences.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
