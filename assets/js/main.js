@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initSmoothScroll();
   initProjectCarousels();
+  initHeroCarousel();
 });
 
 // --- Navbar Scroll Effect ---
@@ -250,3 +251,27 @@ function initProjectCarousels() {
     observer.observe(carousel);
   });
 }
+
+// --- Hero Background Carousel ---
+function initHeroCarousel() {
+  const heroBackground = document.querySelector('.hero-background');
+  if (!heroBackground) return;
+
+  const slides = heroBackground.querySelectorAll('.hero-bg-slide');
+  if (slides.length <= 1) return;
+
+  let currentIndex = 0;
+  const interval = 5000; // 5 seconds per slide (slower for background)
+
+  function nextSlide() {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }
+
+  // Preload next image to avoid flicker (optional, but good practice)
+  // Browser caching usually handles this after first loop
+
+  setInterval(nextSlide, interval);
+}
+
