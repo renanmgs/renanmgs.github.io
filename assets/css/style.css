@@ -276,7 +276,7 @@ section {
 }
 
 .hero-title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-title .highlight {
@@ -284,6 +284,14 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.hero-jobtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .hero-description {
