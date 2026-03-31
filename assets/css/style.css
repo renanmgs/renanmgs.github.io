@@ -1065,6 +1065,61 @@ section {
   height: 24px;
 }
 
+/* --- CV Dropdown --- */
+.cv-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.cv-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  min-width: 200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  padding: 0.5rem;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  pointer-events: none;
+}
+
+.cv-dropdown-menu.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(5px);
+  pointer-events: auto;
+}
+
+.cv-dropdown-item {
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+  text-align: left;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.cv-dropdown-item:hover {
+  background: var(--bg-tertiary);
+  color: var(--accent-primary);
+}
+
 /* --- Footer --- */
 .footer {
   padding: 2rem 0;

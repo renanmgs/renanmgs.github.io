@@ -9,7 +9,41 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initProjectCarousels();
   initHeroCarousel();
+  initCVDropdowns();
 });
+
+// --- CV Download Dropdowns ---
+function initCVDropdowns() {
+  const dropdownConfigs = [
+    { btnId: 'cvDropdownBtn', menuId: 'cvDropdownMenu' },
+    { btnId: 'contactCvDropdownBtn', menuId: 'contactCvDropdownMenu' }
+  ];
+
+  dropdownConfigs.forEach(config => {
+    const btn = document.getElementById(config.btnId);
+    const menu = document.getElementById(config.menuId);
+
+    if (btn && menu) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        // Close other dropdowns first
+        document.querySelectorAll('.cv-dropdown-menu').forEach(m => {
+          if (m !== menu) m.classList.remove('show');
+        });
+        
+        menu.classList.toggle('show');
+      });
+    }
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.cv-dropdown-menu').forEach(menu => {
+      menu.classList.remove('show');
+    });
+  });
+}
 
 // --- Navbar Scroll Effect ---
 function initNavbar() {
