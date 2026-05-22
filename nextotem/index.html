@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXTOTEM — Experiências interativas presenciais</title>
+  <meta name="description" content="O NEXTOTEM transforma espaços físicos em ativações digitais imersivas e compartilháveis. Totem interativo de captura fotográfica com software modular para eventos, marcas e instalações permanentes." />
+  <meta name="theme-color" content="#0A0A0B" />
+
+  <!-- Social / compartilhamento -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://renanmgs.github.io/nextotem/" />
+  <meta property="og:title" content="NEXTOTEM — Experiências interativas presenciais" />
+  <meta property="og:description" content="Transforme qualquer espaço em uma experiência que vira conteúdo. Totem interativo + software modular de captura fotográfica." />
+  <meta property="og:image" content="https://renanmgs.github.io/nextotem/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500&family=Hanken+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     SVG reutilizável — íris de câmera (motivo da marca)
+     ============================================================ -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <symbol id="aperture" viewBox="0 0 100 100">
+      <g class="aperture-blades">
+        <path class="blade" d="M97 50 A47 47 0 0 1 74.91 89.86 L50.66 68.99 L66.11 60.07 Z" />
+        <path class="blade" d="M97 50 A47 47 0 0 1 74.91 89.86 L50.66 68.99 L66.11 60.07 Z" transform="rotate(60 50 50)" />
+        <path class="blade" d="M97 50 A47 47 0 0 1 74.91 89.86 L50.66 68.99 L66.11 60.07 Z" transform="rotate(120 50 50)" />
+        <path class="blade" d="M97 50 A47 47 0 0 1 74.91 89.86 L50.66 68.99 L66.11 60.07 Z" transform="rotate(180 50 50)" />
+        <path class="blade" d="M97 50 A47 47 0 0 1 74.91 89.86 L50.66 68.99 L66.11 60.07 Z" transform="rotate(240 50 50)" />
+        <path class="blade" d="M97 50 A47 47 0 0 1 74.91 89.86 L50.66 68.99 L66.11 60.07 Z" transform="rotate(300 50 50)" />
+      </g>
+      <circle cx="50" cy="50" r="48.6" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.45" />
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Texturas de fundo -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================================================
+     NAVEGAÇÃO
+     ============================================================ -->
+<header class="nav" id="nav">
+  <a href="#topo" class="nav__brand" aria-label="NEXTOTEM — início">
+    <span class="wordmark wordmark--sm">
+      <span>NEXT</span>
+      <svg class="wordmark__o" aria-hidden="true"><use href="#aperture" /></svg>
+      <span>TEM</span>
+    </span>
+  </a>
+
+  <nav class="nav__links" aria-label="Seções">
+    <a href="#experiencia">Experiência</a>
+    <a href="#software">Software</a>
+    <a href="#aplicacoes">Aplicações</a>
+    <a href="#em-acao">Em ação</a>
+    <a href="#modelos">Modelos</a>
+  </nav>
+
+  <div class="nav__actions">
+    <a href="#contato" class="btn btn--ghost btn--sm" data-whatsapp>Falar agora</a>
+  </div>
+
+  <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#experiencia">Experiência</a>
+  <a href="#software">Software</a>
+  <a href="#aplicacoes">Aplicações</a>
+  <a href="#presets">Presets</a>
+  <a href="#em-acao">Em ação</a>
+  <a href="#modelos">Modelos</a>
+  <a href="#contato" class="btn btn--solid" data-whatsapp>Falar no WhatsApp</a>
+</div>
+
+<main id="topo">
+
+  <!-- ==========================================================
+       HERO
+       ========================================================== -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <svg class="hero__aperture" aria-hidden="true"><use href="#aperture" /></svg>
+
+    <div class="hero__inner">
+      <div class="hero__wordmark reveal">
+        <span class="wordmark wordmark--xl">
+          <span>NEXT</span>
+          <svg class="wordmark__o" aria-hidden="true"><use href="#aperture" /></svg>
+          <span>TEM</span>
+        </span>
+        <span class="hero__bymgs">by MGS Studios</span>
+      </div>
+
+      <p class="eyebrow reveal" data-delay="1">Experiências interativas presenciais</p>
+
+      <h1 class="hero__title reveal" data-delay="2">
+        Transforme qualquer espaço<br />
+        em uma experiência que<br />
+        vira <span class="accent">conteúdo</span>.
+      </h1>
+
+      <p class="hero__lead reveal" data-delay="3">
+        O NEXTOTEM é um totem interativo de captura fotográfica que cria
+        ativações digitais imersivas e compartilháveis — temáticas,
+        criadas sob medida para cada marca e entregues na hora.
+      </p>
+
+      <div class="hero__cta reveal" data-delay="4">
+        <a href="#contato" class="btn btn--solid" data-whatsapp>Falar no WhatsApp</a>
+        <a href="#experiencia" class="btn btn--ghost">Ver como funciona</a>
+      </div>
+
+      <ul class="hero__stats reveal" data-delay="5">
+        <li><strong>9</strong><span>segmentos de uso</span></li>
+        <li><strong>3</strong><span>modelos de operação</span></li>
+        <li><strong>7</strong><span>etapas de experiência</span></li>
+        <li><strong>100%</strong><span>experiências sob medida</span></li>
+      </ul>
+    </div>
+
+    <a href="#manifesto" class="hero__scroll" aria-label="Rolar para baixo">
+      <span>scroll</span>
+      <span class="hero__scroll-line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- ==========================================================
+       MANIFESTO
+       ========================================================== -->
+  <section class="manifesto" id="manifesto">
+    <p class="eyebrow reveal">O que fazemos</p>
+    <h2 class="manifesto__text reveal">
+      Não vendemos <span class="strike">fotos</span>.
+      Criamos <span class="accent">experiências</span> que o público
+      <em>quer</em> compartilhar.
+    </h2>
+    <p class="manifesto__sub reveal">
+      Cada ativação gera engajamento real, fortalece a marca e entrega uma
+      lembrança interativa que viaja sozinha pelas redes sociais. O totem é
+      o meio — a experiência instagramável é o produto.
+    </p>
+  </section>
+
+  <!-- ==========================================================
+       ANATOMIA DO TOTEM
+       ========================================================== -->
+  <section class="section anatomy" id="totem">
+    <div class="section__head">
+      <p class="eyebrow reveal"><span class="num">01</span> O totem</p>
+      <h2 class="section__title reveal">Um totem.<br />Quatro componentes.</h2>
+    </div>
+
+    <div class="anatomy__grid">
+      <div class="anatomy__viz reveal" aria-hidden="true">
+        <div class="totem-shape">
+          <div class="totem-shape__screen">
+            <span class="totem-shape__cam"></span>
+            <div class="totem-shape__scan"></div>
+          </div>
+          <div class="totem-shape__base"></div>
+        </div>
+      </div>
+
+      <ol class="anatomy__list">
+        <li class="anatomy__item reveal">
+          <span class="anatomy__idx">A</span>
+          <div>
+            <h3>Tela touchscreen de alta resolução</h3>
+            <p>Tela vertical, de alto impacto visual, que atrai à distância e responde ao toque.</p>
+          </div>
+        </li>
+        <li class="anatomy__item reveal">
+          <span class="anatomy__idx">B</span>
+          <div>
+            <h3>Câmera integrada</h3>
+            <p>Captura em alta qualidade, com preview ao vivo e enquadramento assistido.</p>
+          </div>
+        </li>
+        <li class="anatomy__item reveal">
+          <span class="anatomy__idx">C</span>
+          <div>
+            <h3>Estrutura física personalizada</h3>
+            <p>Gabinete adaptável à identidade do evento, da marca ou do espaço.</p>
+          </div>
+        </li>
+        <li class="anatomy__item reveal">
+          <span class="anatomy__idx">D</span>
+          <div>
+            <h3>Software proprietário</h3>
+            <p>O cérebro da experiência: a plataforma modular que nossa equipe usa para criar cada ativação sob medida.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       A EXPERIÊNCIA — FLUXO DE 7 PASSOS
+       ========================================================== -->
+  <section class="section flow" id="experiencia">
+    <div class="section__head">
+      <p class="eyebrow reveal"><span class="num">02</span> A experiência</p>
+      <h2 class="section__title reveal">Da atração à lembrança,<br />em sete passos.</h2>
+    </div>
+
+    <ol class="flow__steps">
+      <li class="flow__step reveal">
+        <span class="flow__num">01</span>
+        <div class="flow__body">
+          <h3>Vídeo de chamada</h3>
+          <p>A tela exibe um convite em movimento que atrai o público mesmo a distância.</p>
+        </div>
+      </li>
+      <li class="flow__step reveal">
+        <span class="flow__num">02</span>
+        <div class="flow__body">
+          <h3>Interação touch</h3>
+          <p>Um toque inicia a jornada. Simples, intuitivo, sem instruções.</p>
+        </div>
+      </li>
+      <li class="flow__step reveal">
+        <span class="flow__num">03</span>
+        <div class="flow__body">
+          <h3>Apresentação temática</h3>
+          <p>A identidade da marca ou do evento toma conta da tela e prepara o clima.</p>
+        </div>
+      </li>
+      <li class="flow__step reveal">
+        <span class="flow__num">04</span>
+        <div class="flow__body">
+          <h3>Preview da câmera</h3>
+          <p>Imagem ao vivo com fundos, overlays e elementos temáticos posicionados em tempo real.</p>
+        </div>
+      </li>
+      <li class="flow__step flow__step--count reveal">
+        <span class="flow__num">05</span>
+        <div class="flow__body">
+          <h3>Countdown</h3>
+          <p>Uma contagem regressiva — <span class="countdown" aria-hidden="true"><b>3</b><b>2</b><b>1</b></span> — para o momento perfeito.</p>
+        </div>
+      </li>
+      <li class="flow__step reveal">
+        <span class="flow__num">06</span>
+        <div class="flow__body">
+          <h3>Captura da foto</h3>
+          <p>A imagem temática é gerada na hora, com toda a composição visual aplicada.</p>
+        </div>
+      </li>
+      <li class="flow__step flow__step--last reveal">
+        <span class="flow__num">07</span>
+        <div class="flow__body">
+          <h3>Entrega via QR Code</h3>
+          <p>O visitante escaneia e leva a lembrança direto para o celular. Pronto para compartilhar.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ==========================================================
+       O SOFTWARE — DIFERENCIAL
+       ========================================================== -->
+  <section class="section software" id="software">
+    <div class="software__glow" aria-hidden="true"></div>
+    <div class="section__head">
+      <p class="eyebrow reveal"><span class="num">03</span> O diferencial</p>
+      <h2 class="section__title reveal">O verdadeiro produto<br />é o <span class="accent">software</span>.</h2>
+      <p class="section__intro reveal">
+        Hardware qualquer um copia. O que torna o NEXTOTEM único é a plataforma
+        proprietária — com ela, nossa equipe cria experiências sob medida,
+        seguindo a identidade visual de cada marca, evento ou espaço.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature reveal">
+        <svg class="feature__icon" aria-hidden="true"><use href="#aperture" /></svg>
+        <h3>Criação modular</h3>
+        <p>Nossa equipe combina os blocos da plataforma para montar cada experiência — única, sem começar do zero.</p>
+      </article>
+      <article class="feature reveal">
+        <svg class="feature__icon" aria-hidden="true"><use href="#aperture" /></svg>
+        <h3>Identidade visual do cliente</h3>
+        <p>Aplicamos as cores, os logos e o universo visual da marca, do evento ou do espaço em toda a experiência.</p>
+      </article>
+      <article class="feature reveal">
+        <svg class="feature__icon" aria-hidden="true"><use href="#aperture" /></svg>
+        <h3>Tracking facial</h3>
+        <p>Detecção de rosto e posicionamento preciso de elementos 2D que acompanham o visitante.</p>
+      </article>
+      <article class="feature reveal">
+        <svg class="feature__icon" aria-hidden="true"><use href="#aperture" /></svg>
+        <h3>Fundos personalizados</h3>
+        <p>Substituímos o cenário por qualquer ambiente — real, ilustrado ou de marca.</p>
+      </article>
+      <article class="feature reveal">
+        <svg class="feature__icon" aria-hidden="true"><use href="#aperture" /></svg>
+        <h3>Overlays temáticos</h3>
+        <p>Molduras, adereços e camadas gráficas aplicadas sobre a captura em tempo real.</p>
+      </article>
+      <article class="feature reveal">
+        <svg class="feature__icon" aria-hidden="true"><use href="#aperture" /></svg>
+        <h3>Agilidade na produção</h3>
+        <p>A base modular permite criar e adaptar experiências inteiras com rapidez — do briefing à ativação no ar.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       APLICAÇÕES — MARQUEE
+       ========================================================== -->
+  <section class="section applications" id="aplicacoes">
+    <div class="section__head">
+      <p class="eyebrow reveal"><span class="num">04</span> Aplicações</p>
+      <h2 class="section__title reveal">Feito para onde<br />as pessoas se reúnem.</h2>
+    </div>
+
+    <div class="marquee" aria-label="Segmentos de aplicação">
+      <div class="marquee__track">
+        <span>Eventos</span><span class="dot">&#9678;</span>
+        <span>Marcas</span><span class="dot">&#9678;</span>
+        <span>Museus</span><span class="dot">&#9678;</span>
+        <span>Shoppings</span><span class="dot">&#9678;</span>
+        <span>Parques</span><span class="dot">&#9678;</span>
+        <span>Estádios</span><span class="dot">&#9678;</span>
+        <span>Cinemas</span><span class="dot">&#9678;</span>
+        <span>Igrejas</span><span class="dot">&#9678;</span>
+        <span>Ativações promocionais</span><span class="dot">&#9678;</span>
+        <!-- duplicado para loop contínuo -->
+        <span aria-hidden="true">Eventos</span><span class="dot" aria-hidden="true">&#9678;</span>
+        <span aria-hidden="true">Marcas</span><span class="dot" aria-hidden="true">&#9678;</span>
+        <span aria-hidden="true">Museus</span><span class="dot" aria-hidden="true">&#9678;</span>
+        <span aria-hidden="true">Shoppings</span><span class="dot" aria-hidden="true">&#9678;</span>
+        <span aria-hidden="true">Parques</span><span class="dot" aria-hidden="true">&#9678;</span>
+        <span aria-hidden="true">Estádios</span><span class="dot" aria-hidden="true">&#9678;</span>
+        <span aria-hidden="true">Cinemas</span><span class="dot" aria-hidden="true">&#9678;</span>
+        <span aria-hidden="true">Igrejas</span><span class="dot" aria-hidden="true">&#9678;</span>
+        <span aria-hidden="true">Ativações promocionais</span><span class="dot" aria-hidden="true">&#9678;</span>
+      </div>
+    </div>
+
+    <p class="applications__note reveal">
+      Onde houver público, há uma experiência NEXTOTEM esperando para acontecer.
+    </p>
+  </section>
+
+  <!-- ==========================================================
+       PRESETS
+       ========================================================== -->
+  <section class="section presets" id="presets">
+    <div class="section__head">
+      <p class="eyebrow reveal"><span class="num">05</span> Presets &amp; customização</p>
+      <h2 class="section__title reveal">Comece com um preset.<br />Ou crie do zero.</h2>
+      <p class="section__intro reveal">
+        Experiências temáticas prontas para colocar no ar hoje — ou um conceito
+        100% sob medida para a sua marca, campanha ou evento.
+      </p>
+    </div>
+
+    <div class="presets__grid">
+      <article class="preset-card reveal">
+        <span class="preset-card__tag">Preset</span>
+        <h3>Casamento</h3>
+        <p>Molduras elegantes, lettering romântico e overlays para os noivos e convidados.</p>
+      </article>
+      <article class="preset-card reveal">
+        <span class="preset-card__tag">Preset</span>
+        <h3>Anime / Geek</h3>
+        <p>Estética vibrante, efeitos de ação e elementos pop para públicos fãs de cultura geek.</p>
+      </article>
+      <article class="preset-card reveal">
+        <span class="preset-card__tag">Preset</span>
+        <h3>Zoológico / Safari</h3>
+        <p>Cenários de natureza, fauna ilustrada e fundos imersivos para parques e atrações.</p>
+      </article>
+      <article class="preset-card preset-card--custom reveal">
+        <span class="preset-card__tag preset-card__tag--accent">Sob medida</span>
+        <h3>Experiência customizada</h3>
+        <p>Branding para empresas, campanhas temáticas e conceitos exclusivos — criados com você.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       EM AÇÃO — O TOTEM EM CENA
+       ==========================================================
+       Galeria masonry: cada mídia mantém sua proporção original,
+       sem corte. As imagens ficam em  assets/showcase/
+
+       Cada <figure class="shot"> tem:
+         - <span class="shot__tag">                  -> selo "Conceito"
+           <span class="shot__tag shot__tag--real">  -> selo "Cliente real"
+         - <img class="shot__img">                   -> a imagem
+         - <figcaption class="shot__cap">            -> a legenda
+
+       Para usar VÍDEO no lugar da imagem, troque o <img> por:
+         <video class="shot__img" autoplay muted loop playsinline
+                preload="metadata" poster="assets/showcase/capa.jpg">
+           <source src="assets/showcase/arquivo.webm" type="video/webm">
+         </video>
+       ========================================================== -->
+  <section class="section showcase" id="em-acao">
+    <div class="section__head">
+      <p class="eyebrow reveal"><span class="num">06</span> Em ação</p>
+      <h2 class="section__title reveal">O totem em cena.</h2>
+      <p class="section__intro reveal">
+        Nossa primeira instalação em campo — na TV Novo Tempo — e visualizações
+        de conceito que mostram como a experiência se molda a cada tipo de cliente.
+      </p>
+    </div>
+
+    <div class="shot-grid">
+      <figure class="shot reveal">
+        <span class="shot__tag shot__tag--real">Cliente real</span>
+        <div class="shot__media">
+          <img class="shot__img" src="assets/showcase/totem_NT.jpeg"
+               alt="Totem NEXTOTEM instalado no hall da TV Novo Tempo" loading="lazy">
+        </div>
+        <figcaption class="shot__cap">TV Novo Tempo — Foto com Asisstente Virtual, a Esperança</figcaption>
+      </figure>
+
+      <figure class="shot reveal">
+        <span class="shot__tag">Conceito</span>
+        <div class="shot__media">
+          <img class="shot__img" src="assets/showcase/casamento.jpg"
+               alt="Totem NEXTOTEM com tema de casamento em uma recepção" loading="lazy">
+        </div>
+        <figcaption class="shot__cap">Casamento — captura temática personalizada</figcaption>
+      </figure>
+
+      <figure class="shot reveal">
+        <span class="shot__tag">Conceito</span>
+        <div class="shot__media">
+          <img class="shot__img" src="assets/showcase/cinema.jpg"
+               alt="Totem NEXTOTEM em ação de lançamento de filme em um cinema" loading="lazy">
+        </div>
+        <figcaption class="shot__cap">Cinema — ativação de lançamento de filme</figcaption>
+      </figure>
+
+      <figure class="shot reveal">
+        <span class="shot__tag">Conceito</span>
+        <div class="shot__media">
+          <img class="shot__img" src="assets/showcase/time.jpg"
+               alt="Totem NEXTOTEM com tema de clube de futebol" loading="lazy">
+        </div>
+        <figcaption class="shot__cap">Clube esportivo — foto com os ídolos</figcaption>
+      </figure>
+
+      <figure class="shot reveal">
+        <span class="shot__tag">Conceito</span>
+        <div class="shot__media">
+          <img class="shot__img" src="assets/showcase/zoo.jpg"
+               alt="Totem NEXTOTEM com tema de zoológico" loading="lazy">
+        </div>
+        <figcaption class="shot__cap">Zoológico — experiência temática para famílias</figcaption>
+      </figure>
+
+      <figure class="shot reveal">
+        <span class="shot__tag">Conceito</span>
+        <div class="shot__media">
+          <img class="shot__img" src="assets/showcase/museu.jpg"
+               alt="Totem NEXTOTEM com tema de museu e mundo antigo" loading="lazy">
+        </div>
+        <figcaption class="shot__cap">Museu — experiência temática interativa</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       MODELOS DE CONTRATAÇÃO
+       ========================================================== -->
+  <section class="section models" id="modelos">
+    <div class="section__head">
+      <p class="eyebrow reveal"><span class="num">07</span> Como contratar</p>
+      <h2 class="section__title reveal">Três formas de<br />operar o NEXTOTEM.</h2>
+    </div>
+
+    <div class="models__grid">
+      <article class="model-card reveal">
+        <span class="model-card__num">01</span>
+        <h3>Locação de experiências</h3>
+        <p>A experiência completa — totem, software e suporte — para eventos e ativações pontuais.</p>
+        <ul>
+          <li>Ideal para eventos únicos</li>
+          <li>Montagem e operação inclusas</li>
+          <li>Preset ou tema customizado</li>
+        </ul>
+        <a href="#contato" class="model-card__link" data-whatsapp>Solicitar orçamento</a>
+      </article>
+
+      <article class="model-card reveal">
+        <span class="model-card__num">02</span>
+        <h3>Você já tem o equipamento</h3>
+        <p>Se o totem ou a estrutura já são seus, a NEXTOTEM disponibiliza o software e cria a experiência sob medida, com suporte completo.</p>
+        <ul>
+          <li>Roda no equipamento que você já tem</li>
+          <li>Experiência criada pela nossa equipe</li>
+          <li>Suporte técnico contínuo</li>
+        </ul>
+        <a href="#contato" class="model-card__link" data-whatsapp>Falar sobre suporte</a>
+      </article>
+
+      <article class="model-card reveal">
+        <span class="model-card__num">03</span>
+        <h3>Instalação permanente</h3>
+        <p>Totem fixo em shoppings, museus, parques e espaços comerciais, com mensalidade e suporte.</p>
+        <ul>
+          <li>Mensalidade + suporte contínuo</li>
+          <li>Manutenção e atualizações</li>
+          <li>Troca de temas sob demanda</li>
+        </ul>
+        <a href="#contato" class="model-card__link" data-whatsapp>Falar sobre instalação</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       CTA FINAL
+       ========================================================== -->
+  <section class="cta" id="contato">
+    <div class="cta__glow" aria-hidden="true"></div>
+    <svg class="cta__aperture" aria-hidden="true"><use href="#aperture" /></svg>
+
+    <div class="cta__inner">
+      <p class="eyebrow reveal">Vamos criar algo memorável</p>
+      <h2 class="cta__title reveal">
+        Pronto para transformar<br />o seu espaço?
+      </h2>
+      <p class="cta__lead reveal">
+        Conte sobre o seu evento, espaço ou marca. Desenhamos a experiência
+        ideal — do preset ao conceito totalmente customizado.
+      </p>
+      <div class="cta__buttons reveal">
+        <a href="#" class="btn btn--solid btn--lg" data-whatsapp>Falar no WhatsApp</a>
+        <a href="#" class="btn btn--ghost btn--lg" data-email>Enviar e-mail</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <span class="wordmark wordmark--md">
+        <span>NEXT</span>
+        <svg class="wordmark__o" aria-hidden="true"><use href="#aperture" /></svg>
+        <span>TEM</span>
+      </span>
+      <p class="footer__tagline">
+        Plataforma de experiências interativas presenciais.
+      </p>
+    </div>
+
+    <nav class="footer__nav" aria-label="Rodapé">
+      <a href="#experiencia">A experiência</a>
+      <a href="#software">O software</a>
+      <a href="#aplicacoes">Aplicações</a>
+      <a href="#presets">Presets</a>
+      <a href="#em-acao">Em ação</a>
+      <a href="#modelos">Modelos</a>
+    </nav>
+
+    <div class="footer__contact">
+      <span class="footer__label">Contato</span>
+      <a href="#" data-whatsapp>WhatsApp</a>
+      <a href="#" data-email data-email-text>E-mail</a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span>&copy; <span id="year">2026</span> NEXTOTEM</span>
+    <span class="footer__mgs">by MGS Studios</span>
+  </div>
+</footer>
+
+<!-- Botão flutuante de WhatsApp -->
+<a href="#" class="fab" data-whatsapp aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true" width="26" height="26">
+    <path fill="currentColor" d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.8.9 3.8 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.3l-.4-.2-4.9.9.9-4.8-.3-.4c-1-1.6-1.5-3.4-1.5-5.2C4.8 9.5 9.5 4.8 16 4.8S27.2 9.5 27.2 16 22.5 24.8 16 24.8zm6.1-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.8.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.2 3.5 1 4.1.9.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/>
+  </svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
