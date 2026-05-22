@@ -525,7 +525,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .anatomy__item p { color: var(--ink-2); font-size: 0.98rem; }
 
 /* ============================================================
-   FLUXO — 7 PASSOS
+   FLUXO MODULAR
    ============================================================ */
 .flow__steps {
   position: relative;
